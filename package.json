@@ -1,0 +1,27 @@
+{
+  "name": "TeamProfileGenerator",
+  "version": "1.0.0",
+  "description": "This project is about generating team member profiles. THis project also show cases the use of Class, Constructors, HTML, CSS , Materilize CSS, Javascript, Node.js, Test. The use of keywords like extend. Displaying deep understaing of \"DRY\".",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uekemike/TeamProfileGenerator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uekemike/TeamProfileGenerator/issues"
+  },
+  "homepage": "https://github.com/uekemike/TeamProfileGenerator#readme",
+  "dependencies": {
+    "inquirer": "^8.1.2"
+  }
+}
