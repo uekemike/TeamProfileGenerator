@@ -1,32 +1,67 @@
 
 // export function to generate entire page
-const generateTeam = team => {
+const generateTeam = (team) => {
 //this creates the manager html
-    const generateManager = manager => {
+    const generateManager = (manager) => {
         return `
-        <h2 class="card-title">${manager.getName()}</h2>
+        <h2 class="card-title">${manager.name}</h2>
         <ul class="list-group">
-                <li class="list-group-item">ID: ${manager.getId()}</li>
-                <li class="list-group-item">Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a></li>
-                <li class="list-group-item">Office number: ${manager.getOfficeNumber()}</li>
+                <li class="list-group-item">ID: ${manager.id}</li>
+                <li class="list-group-item">Email: <a href="mailto:${manager.email}">${manager.email}</a></li>
+      
         </ul>
         `;
     };
 
-    // const generateEmployee = employee => {
-    //     return `
-    //     <h2 class="card-title">${employee.getName()}</h2>
-    //     <ul class="list-group">
-    //             <li class="list-group-item">ID: ${employee.getId()}</li>
-    //             <li class="list-group-item">Email: <a href="mailto:${employee.getEmail()}">${employee.getEmail()}</a></li>
-    //             <li class="list-group-item">Office number: ${employes.getOfficeNumber()}</li>
-    //     </ul>
-    //     `;
-    // };
+    const generateEngineer = (engineer) => {
+        return `
+        <h2 class="card-title">${engineer.name}</h2>
+        <ul class="list-group">
+                <li class="list-group-item">ID: ${engineer.id}</li>
+                <li class="list-group-item">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></li>
+      
+        </ul>
+        `;
+    };
 
-}
+    const generateIntern = (Intern) => {
+        return `
+        <h2 class="card-title">${Intern.name}</h2>
+        <ul class="list-group">
+                <li class="list-group-item">ID: ${Intern.id}</li>
+                <li class="list-group-item">Email: <a href="mailto:${Intern.email}">${Intern.email}</a></li>
+      
+        </ul>
+        `;
+    };
+const htmlArr = []
 
-module.exports = team => {
+//filter results by role and then map over by using .join which returns an array of objects
+htmlArr.push(
+     team
+        .filter((employee) => employee.role === "manager")
+        .map((manager) => generateManager(manager))
+        .join("")
+);
+
+htmlArr.push(
+    team
+       .filter((employee) => employee.role === "engineer")
+       .map((engineer) => generateEngineer(engineer))
+       .join("")
+);
+htmlArr.push(
+    team
+       .filter((employee) => employee.role === "intern")
+       .map((intern) => generateIntern(intern))
+       .join("")
+);
+return htmlArr.join("");
+
+
+};
+
+module.exports = (team)=> {
 
     return  `
     <!DOCTYPE html>
