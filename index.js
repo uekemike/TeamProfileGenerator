@@ -1,4 +1,7 @@
 const render = require("./src/page-template");
+const fs =require("fs");
+const path = require("path");
+
 const team = [
     { 
     name: "ufuoma",
