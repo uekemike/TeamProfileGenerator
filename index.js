@@ -2,6 +2,8 @@ const render = require("./src/page-template");
 const fs =require("fs");
 const path = require("path");
 
+const OUTPUT_DIR = path.resolve(_dirname, "dist")
+
 const team = [
     { 
     name: "ufuoma",
