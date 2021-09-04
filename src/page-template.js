@@ -1,6 +1,8 @@
 
 // export function to generate entire page
-module.exports =team =>{
+
+module.exports =team => {
+
     return  
     `
     <!DOCTYPE html>
@@ -35,5 +37,5 @@ module.exports =team =>{
 </body>
 </html>
     `;
-}
+};
 
