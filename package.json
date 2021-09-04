@@ -1,5 +1,5 @@
 {
-  "name": "TeamProfileGenerator",
+  "name": "teamprofilegenerator",
   "version": "1.0.0",
   "description": "This project is about generating team member profiles. THis project also show cases the use of Class, Constructors, HTML, CSS , Materilize CSS, Javascript, Node.js, Test. The use of keywords like extend. Displaying deep understaing of \"DRY\".",
   "main": "index.js",
@@ -22,6 +22,8 @@
   },
   "homepage": "https://github.com/uekemike/TeamProfileGenerator#readme",
   "dependencies": {
-    "inquirer": "^8.1.2"
-  }
+    "inquirer": "^8.1.2",
+    "jest": "^27.1.0"
+  },
+  "devDependencies": {}
 }
