@@ -1,10 +1,34 @@
 
 // export function to generate entire page
+const generateTeam = team => {
+//this creates the manager html
+    const generateManager = manager => {
+        return `
+        <h2 class="card-title">${manager.getName()}</h2>
+        <ul class="list-group">
+                <li class="list-group-item">ID: ${manager.getId()}</li>
+                <li class="list-group-item">Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a></li>
+                <li class="list-group-item">Office number: ${manager.getOfficeNumber()}</li>
+        </ul>
+        `;
+    };
 
-module.exports =team => {
+    // const generateEmployee = employee => {
+    //     return `
+    //     <h2 class="card-title">${employee.getName()}</h2>
+    //     <ul class="list-group">
+    //             <li class="list-group-item">ID: ${employee.getId()}</li>
+    //             <li class="list-group-item">Email: <a href="mailto:${employee.getEmail()}">${employee.getEmail()}</a></li>
+    //             <li class="list-group-item">Office number: ${employes.getOfficeNumber()}</li>
+    //     </ul>
+    //     `;
+    // };
 
-    return  
-    `
+}
+
+module.exports = team => {
+
+    return  `
     <!DOCTYPE html>
 <html lang="en">
 
@@ -35,7 +59,6 @@ module.exports =team => {
         </div>
     </div>
 </body>
-</html>
-    `;
+</html> `;
 };
 
