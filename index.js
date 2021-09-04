@@ -2,7 +2,8 @@ const render = require("./src/page-template");
 const fs =require("fs");
 const path = require("path");
 
-const OUTPUT_DIR = path.resolve(_dirname, "dist")
+const OUTPUT_DIR = path.resolve(__dirname, "dist");
+const outputPath = path.join(OUTPUT_DIR, "index.html");
 
 const team = [
     { 
@@ -31,4 +32,6 @@ const team = [
 },
        
 ]
-console.log(render(team))
+
+fs.writeFileSync(outputPath, render(team), "utf-8")
+
